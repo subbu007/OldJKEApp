@@ -1,0 +1,11 @@
+com/jke/logic/OrganizationLogic.class
+com/jke/logic/JKE_Util.class
+com/jke/organizations/Care.class
+com/jke/organizations/AmericanCancerSociety.class
+com/jke/logic/AccountLogic.class
+com/jke/organizations/RedCross.class
+com/jke/logic/TransactionLogic$ProposedContributionResults.class
+com/jke/logic/Finder.class
+com/jke/organizations/SalvationArmy.class
+com/jke/logic/TransactionLogic.class
+com/jke/organization/Organization.class

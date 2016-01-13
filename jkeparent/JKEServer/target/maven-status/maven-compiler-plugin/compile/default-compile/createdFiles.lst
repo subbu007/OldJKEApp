@@ -1,0 +1,5 @@
+com/jke/server/JKEServer.class
+com/jke/server/OrganizationsResource.class
+com/jke/server/AdminResource.class
+com/jke/server/UserResource.class
+com/jke/server/TransactionsResource.class

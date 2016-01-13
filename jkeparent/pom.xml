@@ -1,0 +1,69 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.jke.bankingapp</groupId>
+  <artifactId>jkeparent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>JKEParent</name>
+  <description>Parent Pom for multimodule JKE Project</description>
+  <modules>
+	<module>JKEDBAccess</module>
+	<module>JKEBusinessData</module>
+	<module>JKEBusinessLogic</module>
+	<module>JKELib</module>
+	<module>JKEServer</module>
+	<module>JKEWebUI</module>
+	<module>JKEJavaUI</module>
+  </modules>
+  
+  <properties> 
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> 
+    <sonar.language>java</sonar.language> 
+    <sonar.sources>src/main/java</sonar.sources> 
+  </properties> 
+
+  <build>
+	  <pluginManagement>
+		<plugins>
+		  <plugin>
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>sonar-maven-plugin</artifactId>
+			<version>2.3</version>
+		  </plugin>
+		<plugin>
+			 <groupId>org.apache.cayenne.plugins</groupId>
+  			 <artifactId>maven-cayenne-plugin</artifactId>
+   			<version>3.2M1</version>
+   		<dependencies>
+      		<dependency>
+        		<groupId>org.apache.derby</groupId>
+        		<artifactId>derbyclient</artifactId>
+        		<version>10.10.1.1</version>
+      			</dependency>
+   			</dependencies>
+		</plugin>	
+		  <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.7.5.201505241946</version>  
+                <executions>
+  <execution>
+      <id>pre-unit-test</id>
+          <goals>
+          <goal>prepare-agent</goal>
+              </goals>
+                </execution>
+                  <execution>
+                      <id>post-unit-test</id>
+                          <phase>test</phase>
+                              <goals>
+                              <goal>report</goal>
+                                  </goals>
+                                    </execution>
+                                    </executions>		  
+		  </plugin>
+		</plugins>
+	  </pluginManagement>
+  </build>
+
+</project>
